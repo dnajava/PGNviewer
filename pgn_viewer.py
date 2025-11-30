@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import os, io, threading
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, scrolledtext
@@ -9,7 +8,7 @@ from PIL import Image, ImageTk
 
 from createtooltip import CreateToolTip
 
-DEFAULT_PGN_DIR = "/mnt/sda3/bigs/PGN"
+DEFAULT_PGN_DIR = "/path/to/files"
 CHUNK_SIZE = 32 * 1024  # 32 KB
 
 
