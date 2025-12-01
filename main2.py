@@ -1,8 +1,5 @@
 import sys
-from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QSplitter, QTextEdit,
-    QLabel, QVBoxLayout, QWidget, QPushButton, QHBoxLayout
-)
+from PyQt6.QtWidgets import QApplication
 from ui import PGNViewerWindow
 from pgn_viewer2 import ChessGame
 
