@@ -9,7 +9,7 @@ import chess.pgn
 class ChessGame:
     """Yksi kokonainen shakkipeli"""
     headers:        GameHeaders
-    moves:          List[str]           = field(default_factory=list)        # SAN-siirrot: ["e4", "e5", ...]
+    moves:          List[str]           = field(default_factory=list)  # SAN-siirrot: ["e4", "e5", ...]
     board_history:  List[chess.Board]   = field(default_factory=list)  # jokainen asema
     comments:       Dict[int, str]      = field(default_factory=dict)  # puolinumero -> kommentti
 
