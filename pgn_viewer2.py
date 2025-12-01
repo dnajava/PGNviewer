@@ -6,12 +6,6 @@ from enum import Enum
 from typing import List, Optional, Dict
 import chess  # python-chess kirjasto (pip install chess)
 import chess.pgn
-import io, ui
-from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QSplitter, QTextEdit,
-    QLabel, QVBoxLayout, QWidget, QPushButton, QHBoxLayout
-)
-
 
 class Result(Enum):
     WHITE_WINS = "1-0"
