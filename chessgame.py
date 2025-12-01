@@ -1,12 +1,3 @@
-"""
-Tämä on
-
-paljon helpommin ylläpidettävän
-testattavan
-laajennettavan (esim. useampi peli, turnausten selaus, tekoälyanalyysi jne.)
-ja ennen kaikkea ammattimaisemman näköisen
-"""
-
 from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import date
@@ -17,10 +8,10 @@ import chess.pgn
 
 class ChessGame:
     """Yksi kokonainen shakkipeli"""
-    headers: GameHeaders
-    moves: List[str] = field(default_factory=list)        # SAN-siirrot: ["e4", "e5", ...]
-    board_history: List[chess.Board] = field(default_factory=list)  # jokainen asema
-    comments: Dict[int, str] = field(default_factory=dict)  # puolinumero -> kommentti
+    headers:        GameHeaders
+    moves:          List[str]           = field(default_factory=list)        # SAN-siirrot: ["e4", "e5", ...]
+    board_history:  List[chess.Board]   = field(default_factory=list)  # jokainen asema
+    comments:       Dict[int, str]      = field(default_factory=dict)  # puolinumero -> kommentti
 
     def __post_init__(self) -> None:
         # Ladataan peli chess.pgn:stä tai rakennetaan käsin
