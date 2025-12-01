@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     # Esimerkki: ladataan PGN-tiedosto
 
-    with open("/mnt/sda3/bigs/PGN/_pgn_lauttssk_JSM-2025.pgn") as f:
+    with open("/path/to/PGN") as f:
         pgn_text = f.read()
 
     game = ChessGame.from_pgn_string(pgn_text)
