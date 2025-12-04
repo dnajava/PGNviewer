@@ -13,12 +13,7 @@ def elo_expected(Ro, Ri):
 def Kr_for_Ro(Ro):
     """SSL 7.7: Kr riippuu Ro:sta.
        Taulukko (Ro-alue -> Kr):
-         Ro >= 2050 -> 20
-         1950-2049 -> 25
-         1850-1949 -> 30
-         1750-1849 -> 35
-         1650-1749 -> 40
-         <=1649 -> 45
+         Ro >= 2050 -> 20; 1950-2049 -> 25; 1850-1949 -> 30; 1750-1849 -> 35; 1650-1749 -> 40; <=1649 -> 45
     """
     if Ro >= 2050: return 20
     if Ro >= 1950: return 25
@@ -77,15 +72,14 @@ def established_player_selo(Ro, opponents_Ri, Ws, first60_minutes_list):
 
 # Esimerkki:
 if __name__ == "__main__":
-    # vakiintuneen pelaajan esimerkki
-    Ro = 1800
+    Ro = 1800                                   # vakiintuneen pelaajan esimerkki
     opponents_Ri = [1750, 1820, 1900, 1700]
     Ws = [1, 0.5, 0, 1]
-    times = [90, 90, 90, 90]  # kaikki normaali aika
+    times = [90, 90, 90, 90]                    # kaikki normaali aika
     print("Uusi Selo:", established_player_selo(Ro, opponents_Ri, Ws, times))
 
     # uuden pelaajan esimerkki
-    ris = [1500, 1600, 1550]
+    ris = [1500, 1600, 1550]                    # uuden pelaajan esimerkki
     W = 2.0
     N = 3
     print("Uuden pelaajan laskettu Selo:", new_player_selo(ris, W, N))
